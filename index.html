@@ -1,0 +1,51 @@
+<body>
+  <!-- Element to contain animated typing -->
+  <div class="container">
+  
+  <span id="element"></span>
+  </div>
+  <!-- Load library from the CDN -->
+  <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+  <!-- Setup and start animation! -->
+  <script>
+    var typed = new Typed('#element', {
+      strings: ['Hallo Baby!', 'Wusstest Du schon?', 'Ich liebe Dich!!!'],
+      typeSpeed: 50,
+      backSpeed: 25,
+      loop: true
+    });
+  </script>
+</body>
+
+<style>
+  body {
+	background: linear-gradient(-45deg, #1831f9, #8ec4b6);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+#element {
+  font-family:Helvetica;
+  font-size: 24px;
+  font-weight: bold;
+  color:white;
+}
+.container {
+  display:flex;
+  justify-content:center;
+  margin-top:100px;
+}
+</style>
